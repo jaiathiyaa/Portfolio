@@ -1,0 +1,165 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.onam {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-top: 100px;
+  background: url('/img/Onam-series.jpg') no-repeat;
+}
+
+/* ================= TRACKS ================= */
+
+.onam-track,
+.onam-trackReverse {
+  display: flex;
+  animation: scroll 3.5s linear infinite;
+}
+
+.onam-trackReverse {
+  margin-top: 95px;
+  animation-direction: reverse;
+}
+
+/* ================= CARDS ================= */
+
+.card,
+.cardReverse {
+  width: 30%;                 /* 🔥 SAME AS YOUR ORIGINAL */
+  flex-shrink: 0;             /* 🔥 CRITICAL FIX */
+  background-color: white;
+  border-radius: 15px;
+  margin-right: 45px;
+  overflow: hidden;           /* 🔥 clips video */
+}
+
+/* ================= VIDEO ================= */
+
+.card video,
+.cardReverse video {
+  width: 100%;
+  height: auto;               /* 🔥 natural height */
+  aspect-ratio: 9 / 16;       /* 🔥 keeps SAME look everywhere */
+  object-fit: cover;          /* 🔥 PROPER usage */
+  display: block;
+}
+
+/* ================= TEXT ================= */
+
+.onamTxt {
+  color: #fff;
+  font-family: 'Monument-Extended', sans-serif;
+  font-size: 4rem;
+  line-height: 80px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.onamDes {
+  color: #fff;
+  font-family: 'Rimouski', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  max-width: 600px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .onamTxt {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+  .onamDes {
+    font-size: 1rem;
+    max-width: 500px;
+  }
+  .onam-trackReverse {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 650px) {
+  .onamTxt {
+    font-size: 2.6rem;
+    line-height: 50px;
+  }
+  .onamDes {
+    font-size: 0.7rem;
+    max-width: 350px;
+  }
+  .onam-trackReverse {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+  .onam {
+    margin-top: 70px;
+  }
+  .onamTxt {
+    font-size: 2.3rem;
+    line-height: 40px;
+  }
+  .onamDes {
+    font-size: 0.65rem;
+    max-width: 330px;
+    margin-bottom: 35px;
+  }
+  .card,
+  .cardReverse {
+    border-radius: 8px;
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 450px) {
+  .onamTxt {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .onamDes {
+    font-size: 0.6rem;
+    max-width: 300px;
+  }
+  .card,
+  .cardReverse {
+    border-radius: 7px;
+    margin-right: 17px;
+  }
+  .onam-trackReverse {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .onamTxt {
+    font-size: 1.8rem;
+  }
+  .onamDes {
+    font-size: 0.5rem;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 350px) {
+  .onamTxt {
+    font-size: 1.5rem;
+  }
+  .onamDes {
+    font-size: 0.4rem;
+    max-width: 200px;
+  }
+  .onam-trackReverse {
+    margin-top: 30px;
+  }
+}
